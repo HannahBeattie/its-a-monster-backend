@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "worries",
+  "info": {
+    "singularName": "worry",
+    "pluralName": "worries",
+    "displayName": "worries",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "finished": {
+      "type": "boolean"
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "worries"
+    }
+  }
+}
